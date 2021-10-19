@@ -381,7 +381,7 @@ nav {
 
 @media (max-width: 48em) {
   nav > input:checked ~ ul {
-    max-height: 200px;
+    max-height: 300px;
     margin-top: 10px;
     border-top: 1px solid var(--cmed);
   }
@@ -421,7 +421,7 @@ nav > div > * > img {
 }
 
 nav > div > a:hover {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 @media (max-width: 48em) {
