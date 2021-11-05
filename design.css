@@ -22,9 +22,9 @@ html[data-theme="light"],
   --cfg: black;
   --cbg: #fff;
   --ornament: "‹‹‹ ›››";
-  --font-p: 13pt Garamond, sans-serif;
-  --font-h: 13pt Garamond, sans-serif;
-  --font-c: 12pt Garamond, sans-serif;
+  --font-p: 13pt Helvetica, Arial, sans-serif;
+  --font-h: 13pt Helvetica, Arial, sans-serif;
+  --font-c: 12pt Helvetica, Arial, sans-serif;
 }
 
 /* 2. Reset & Base Tags
