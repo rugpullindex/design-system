@@ -778,3 +778,60 @@ thead {
   background-color: white;
   z-index: 2;
 }
+
+.circular-progress-bar {
+  --progrress-bar-size: 56px;
+  width: var(--progrress-bar-size);
+  height: var(--progrress-bar-size);
+  position: relative;
+  margin: 0 auto;
+}
+
+.circular-progress-bar svg {
+  width: var(--progrress-bar-size);
+  height: var(--progrress-bar-size);
+  transform: translate(0%); /* reset style global style */
+}
+
+.circular-progress-bar svg circle {
+  --radius: 23px; /* the same radius is used to draw the svg */
+  --circle-perimeter: calc(2 * 3.14 * var(--radius));
+  fill: none;
+  stroke-width: 3;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: var(--circle-perimeter);
+  stroke-dashoffset: var(--circle-perimeter);
+  stroke-linecap: round;
+}
+
+.circular-progress-bar svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #dddddd;
+}
+
+.circular-progress-bar svg circle:nth-child(2) {
+  /* percent is a variable added throught html */
+  /* percent should be between 0 and 100 */
+  stroke-dashoffset: calc(
+    var(--circle-perimeter) - (var(--circle-perimeter) * var(--percent)) / 100
+  );
+  stroke: #30454e;
+}
+
+.circular-progress-bar .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+}
+
+.circular-progress-bar .num span {
+  font-size: 0.8rem;
+  font-weight: normal; /* reset style global style */
+}
