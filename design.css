@@ -172,6 +172,7 @@ td:first-child,
 th:first-child {
   text-align: left;
 }
+
 tr:hover {
   background-color: var(--clight);
 }
@@ -834,4 +835,25 @@ thead {
 .circular-progress-bar .num span {
   font-size: 0.8rem;
   font-weight: normal; /* reset style global style */
+}
+
+.ocean-icon:after {
+  content: url("/ocean-logo.svg");
+  margin-left: 0.5rem;
+}
+
+.bdp-icon {
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  background: url("/bdp-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0.5rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
