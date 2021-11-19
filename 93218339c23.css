@@ -99,6 +99,9 @@ select:hover {
   color: white;
   border-color: var(--cemph);
 }
+a[target=_blank]::after {
+  content: "↗";
+}
 
 /* headings */
 h1,
