@@ -99,7 +99,7 @@ select:hover {
   color: white;
   border-color: var(--cemph);
 }
-a[target=_blank]::after {
+a[target="_blank"]::after {
   content: "↗";
 }
 
@@ -739,19 +739,17 @@ abbr[data-title] {
   text-decoration: underline dotted;
   cursor: help;
 }
-@media (max-width: 1024px) {
-  abbr[data-title]:hover::before,
-  abbr[data-title]:focus::before {
-    position: absolute;
-    top: 2em;
-    width: 10em;
-    padding: 0.5em 0.7em;
-    color: var(--cbg);
-    background-color: var(--cfg);
-    box-shadow: 0.1rem 0.1rem 0.4rem 0 var(--cfg);
-    content: attr(data-title);
-    white-space: normal;
-  }
+abbr[data-title]:hover::before,
+abbr[data-title]:focus::before {
+  position: absolute;
+  top: 2em;
+  width: 10em;
+  padding: 0.5em 0.7em;
+  color: var(--cbg);
+  background-color: var(--cfg);
+  box-shadow: 0.1rem 0.1rem 0.4rem 0 var(--cfg);
+  content: attr(data-title);
+  white-space: normal;
 }
 
 .fin-table--row {
