@@ -11,7 +11,7 @@ const app = express()
 axios(url)
   .then(response => {
 
-    const html = response.data
+    const html = response.data //index.html
     const new_html = html.replace("/93218339c23.css", `/local.css`)
     //the above line will change the href file location in the html file
     //to the local css file in the design system repo
@@ -26,10 +26,10 @@ axios(url)
 app.use(express.static(__dirname)) 
 
 app.get('/', function(req, res) {
-  
-  
+  //Serve the written index.html file on localhost:5000/
+  res.sendFile(path.join(__dirname, 'cache/index.html')) 
   
 })
 
-app.listen(PORT, () => console.log('rugpullindex runs on localhost:5000'))
+app.listen(PORT, () => console.log('rugpullindex runs on localhost:5000/'))
 
