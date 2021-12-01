@@ -16,9 +16,14 @@ axios(url)
     //the above line will change the href file location in the html file
     //to the local css file in the design system repo
     
+    //Make the cache directory
+    fs.mkdir(path.join(__dirname, 'cache'), function(err) {
+      if(err) { return console.log(err) }
+    })
+
     //Save the new html file to cache folder in design system repo
     fs.writeFile('cache/index.html', new_html, function(err) { 
-      if(err) { return console.log(err); }
+      if(err) { return console.log(err) }
     })
     
   })
