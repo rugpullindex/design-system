@@ -10,7 +10,7 @@
 Make sure you have node installed 
 
 Install the dependencies as follows:  
-  `npm i express axios fs nodemon`
+  `npm i`
 
 Start development as follows:
   ` npm run dev`
