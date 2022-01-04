@@ -858,3 +858,31 @@ thead {
   align-items: center;
   justify-content: space-between;
 }
+
+form.newsletter {
+  margin: 1rem 0.5em;
+  max-width: 25em;
+  font-size: 0.8em;
+}
+form.newsletter .row {
+  margin-left: 0;
+  margin-right: 0
+}
+form.newsletter .row input,button {
+  padding: 0.3rem;
+}
+form.newsletter button {
+  margin: 0;
+  background-color: white;
+}
+@media (min-width: 40em) {
+  form.newsletter .row * {
+    margin: 0 0.3rem;
+  }
+  form.newsletter *:first-child {
+    margin-left: 0;
+  }
+  form.newsletter *:last-child {
+    margin-right: 0;
+  }
+}
