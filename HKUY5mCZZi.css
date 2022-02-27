@@ -884,3 +884,67 @@ form.newsletter button {
     margin-right: 0;
   }
 }
+
+tr:nth-child(n + 4) {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+tr:nth-child(n + 10) {
+  display: none;
+}
+
+table {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  margin: 15% 5% 25% 5%;
+
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.overlay--content .subtext {
+  margin-top: 0.75em;
+  font-size: 0.4em;
+}
+
+.overlay--content .subtext a {
+  text-decoration: underline;
+}
+
+.overlay--content button {
+  margin-top: 0.6em;
+  padding: 0.15em 1em 0.15em 1em;
+
+  font-size: 0.8em;
+  background-color: black;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.overlay--content button:hover {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
