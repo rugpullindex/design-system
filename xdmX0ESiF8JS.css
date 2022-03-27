@@ -804,6 +804,12 @@ thead {
   stroke-linecap: round;
 }
 
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+}
+
 .circular-progress-bar svg circle:nth-child(1) {
   stroke-dashoffset: 0;
   stroke: #dddddd;
@@ -816,6 +822,7 @@ thead {
     var(--circle-perimeter) - (var(--circle-perimeter) * var(--percent)) / 100
   );
   stroke: #30454e;
+  animation: dash 0.5s linear;
 }
 
 .circular-progress-bar .num {
